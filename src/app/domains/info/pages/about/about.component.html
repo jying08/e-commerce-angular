@@ -7,14 +7,15 @@
     quaerat quibusdam ea in?
   </p>
   <p class=" text-xs">
-    Numero de clientes<app-counter
+    Numero de clientes@if (duration() > 0) {
+    <app-counter
       [duration]="duration()"
       [message]="mensaje()"
-      *ngIf="duration() > 0"
-    />
-  </p>
-  <div>
-    <app-wave-audio audioUrl="assets/audio.mp3"/>
-  </div>
+      />
+  }
+</p>
+<div>
+  <app-wave-audio audioUrl="assets/audio.mp3"/>
+</div>
 </div>
 
